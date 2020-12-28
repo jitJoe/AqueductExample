@@ -1,0 +1,103 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aqueduct.Client" Version="0.1.0" />
+    <PackageReference Include="Blazored.LocalStorage" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="5.0.0" />
+    <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\AqueductExample.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\webfonts\fa-brands-400.eot" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\webfonts\fa-brands-400.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\webfonts\fa-brands-400.ttf" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\webfonts\fa-brands-400.woff" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\webfonts\fa-brands-400.woff2" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\webfonts\fa-regular-400.eot" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\webfonts\fa-regular-400.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\webfonts\fa-regular-400.ttf" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\webfonts\fa-regular-400.woff" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\webfonts\fa-regular-400.woff2" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\webfonts\fa-solid-900.eot" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\webfonts\fa-solid-900.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\webfonts\fa-solid-900.ttf" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\webfonts\fa-solid-900.woff" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\webfonts\fa-solid-900.woff2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Components" />
+    <Folder Include="Pages" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ResolveComReferenceCache Remove="obj\Debug\net5.0\AqueductExample.Client.csproj.ResolveComReference.cache" />
+    <_ResolveComReferenceCache Remove="obj\Debug\net5.0\AqueductExample.Client.csproj.ResolveComReference.cache" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <IntermediateAssembly Remove="obj\Debug\net5.0\AqueductExample.Client.dll" />
+    <IntermediateAssembly Remove="obj\Debug\net5.0\AqueductExample.Client.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <IntermediateRefAssembly Remove="obj\Debug\net5.0\ref\AqueductExample.Client.dll" />
+    <IntermediateRefAssembly Remove="obj\Debug\net5.0\ref\AqueductExample.Client.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\net5.0\AqueductExample.Client.pdb" />
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\net5.0\AqueductExample.Client.pdb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\net5.0\AqueductExample.Client.dll" />
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\net5.0\AqueductExample.Client.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationManifest Remove="obj\Debug\net5.0\AqueductExample.Client.dll.manifest" />
+    <ApplicationManifest Remove="obj\Debug\net5.0\AqueductExample.Client.dll.manifest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DeployManifest Remove="obj\Debug\net5.0\AqueductExample.Client.application" />
+    <DeployManifest Remove="obj\Debug\net5.0\AqueductExample.Client.application" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClsidMap Remove="obj\Debug\net5.0\AqueductExample.Client.clsidmap" />
+    <ClsidMap Remove="obj\Debug\net5.0\AqueductExample.Client.clsidmap" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <RegFreeComManifest Remove="obj\Debug\net5.0\AqueductExample.Client.X.manifest" />
+    <RegFreeComManifest Remove="obj\Debug\net5.0\AqueductExample.Client.X.manifest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <RazorIntermediateAssembly Remove="obj\Debug\net5.0\AqueductExample.Client.Views.dll" />
+    <RazorIntermediateAssembly Remove="obj\Debug\net5.0\AqueductExample.Client.Views.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\net5.0\AqueductExample.Client.Views.pdb" />
+    <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\net5.0\AqueductExample.Client.Views.pdb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_RazorComponentDeclarationAssembly Remove="obj\Debug\net5.0\RazorDeclaration\AqueductExample.Client.dll" />
+    <_RazorComponentDeclarationAssembly Remove="obj\Debug\net5.0\RazorDeclaration\AqueductExample.Client.dll" />
+  </ItemGroup>
+
+</Project>

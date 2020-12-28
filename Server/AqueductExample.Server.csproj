@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aqueduct.Server" Version="0.1.0" />
+    <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
+    <PackageReference Include="Dapper" Version="2.0.35" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Npgsql" Version="4.1.4" />
+    <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Client\AqueductExample.Client.csproj" />
+    <ProjectReference Include="..\Shared\AqueductExample.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ResolveComReferenceCache Remove="obj\Debug\net5.0\AqueductExample.Server.csproj.ResolveComReference.cache" />
+    <_ResolveComReferenceCache Remove="obj\Debug\net5.0\AqueductExample.Server.csproj.ResolveComReference.cache" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <IntermediateAssembly Remove="obj\Debug\net5.0\AqueductExample.Server.dll" />
+    <IntermediateAssembly Remove="obj\Debug\net5.0\AqueductExample.Server.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <IntermediateRefAssembly Remove="obj\Debug\net5.0\ref\AqueductExample.Server.dll" />
+    <IntermediateRefAssembly Remove="obj\Debug\net5.0\ref\AqueductExample.Server.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\net5.0\AqueductExample.Server.pdb" />
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\net5.0\AqueductExample.Server.pdb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\net5.0\AqueductExample.Server.dll" />
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\net5.0\AqueductExample.Server.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationManifest Remove="obj\Debug\net5.0\AqueductExample.Server.dll.manifest" />
+    <ApplicationManifest Remove="obj\Debug\net5.0\AqueductExample.Server.dll.manifest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DeployManifest Remove="obj\Debug\net5.0\AqueductExample.Server.application" />
+    <DeployManifest Remove="obj\Debug\net5.0\AqueductExample.Server.application" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClsidMap Remove="obj\Debug\net5.0\AqueductExample.Server.clsidmap" />
+    <ClsidMap Remove="obj\Debug\net5.0\AqueductExample.Server.clsidmap" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <RegFreeComManifest Remove="obj\Debug\net5.0\AqueductExample.Server.X.manifest" />
+    <RegFreeComManifest Remove="obj\Debug\net5.0\AqueductExample.Server.X.manifest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <RazorIntermediateAssembly Remove="obj\Debug\net5.0\AqueductExample.Server.Views.dll" />
+    <RazorIntermediateAssembly Remove="obj\Debug\net5.0\AqueductExample.Server.Views.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\net5.0\AqueductExample.Server.Views.pdb" />
+    <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\net5.0\AqueductExample.Server.Views.pdb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckBuilt Remove="obj\Debug\net5.0\AqueductExample.Server.Views.dll" />
+    <UpToDateCheckBuilt Remove="obj\Debug\net5.0\AqueductExample.Server.Views.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_RazorComponentDeclarationAssembly Remove="obj\Debug\net5.0\RazorDeclaration\AqueductExample.Server.dll" />
+    <_RazorComponentDeclarationAssembly Remove="obj\Debug\net5.0\RazorDeclaration\AqueductExample.Server.dll" />
+  </ItemGroup>
+
+</Project>

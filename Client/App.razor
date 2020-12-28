@@ -1,0 +1,93 @@
+@using Aqueduct.Client.ServiceProvider
+@using Aqueduct.Client.Transport
+@using AqueductExample.Shared
+@using Microsoft.Extensions.Logging
+@inject IClientTransportDriver _clientTransportDriver
+@inject IClientServiceProvider _clientServiceProvider
+@inject NavigationManager navigationManager
+@inject ILogger<App> _logger
+
+<div>Aqeduct Example</div>
+
+<div>
+    Username: <input type="text" @bind:event="oninput" @bind="_username" disabled="@_sendingMessage" />
+</div>
+
+<div>
+    <ul>
+        @foreach (var message in _chatMessages)
+        {
+            if (message is FancyChatMessage)
+            {
+                var fancyMessage = message as FancyChatMessage;
+                <li style="color: @fancyMessage.Colour">[@message.SentAt] @message.Sender: @message.Message</li>
+            }
+            else
+            {
+                <li>[@message.SentAt] @message.Sender: @message.Message</li>
+            }
+        }
+    </ul>
+    <input type="text" @bind:event="oninput" @bind="_message" disabled="@_sendingMessage" />
+    <button @onclick="SendMessage" disabled="@SendMessageDisabled">Send Message</button>
+    
+    @if (_failedSendMessage)
+    {
+        <p>Could not send message :[</p>
+    }
+</div>
+
+@code {
+
+    private IChatServerService _chatServerService;
+    private IChatClientLocalService _chatClientLocalService;
+
+    private List<ChatMessage> _chatMessages = new List<ChatMessage>();
+    
+    private string _username = "";
+    
+    private bool _sendingMessage = false;
+    private bool _failedSendMessage = false;
+    private string _message = "";
+    
+    private bool SendMessageDisabled => _message.Length < 2 || _sendingMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await _clientTransportDriver.StartAsync();
+        
+        _chatServerService = _clientServiceProvider.GetServerService<IChatServerService>();
+        _chatClientLocalService = _clientServiceProvider.GetLocalService<IChatClientService, IChatClientLocalService>();
+
+        _chatClientLocalService.SubscribeToMessages((message) =>
+        {
+            _chatMessages.Add(message);
+            StateHasChanged();
+        });
+    }
+
+    private async Task SendMessage()
+    {
+        _sendingMessage = true;
+        _failedSendMessage = false;
+
+        try
+        {
+            await _chatServerService.SendMessage(new ChatMessage
+            {
+                Message = _message,
+                Sender = _username,
+                SentAt = DateTimeOffset.Now
+            });
+        }
+        catch (Exception exception)
+        {
+            _logger.LogError(exception, "Failed to send message");
+            _failedSendMessage = true;
+        }
+
+        _message = "";
+        _sendingMessage = false;
+    }
+    
+}

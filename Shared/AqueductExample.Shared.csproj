@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Exceptions" />
+    <Folder Include="Models" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_UnmanagedRegistrationCache Remove="obj\AqueductExample.Shared.csproj.UnmanagedRegistration.cache" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ResolveComReferenceCache Remove="obj\Debug\net5.0\AqueductExample.Shared.csproj.ResolveComReference.cache" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <IntermediateAssembly Remove="obj\Debug\net5.0\AqueductExample.Shared.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <IntermediateRefAssembly Remove="obj\Debug\net5.0\ref\AqueductExample.Shared.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\net5.0\AqueductExample.Shared.pdb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\net5.0\AqueductExample.Shared.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationManifest Remove="obj\Debug\net5.0\Native.AqueductExample.Shared.manifest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DeployManifest Remove="obj\Debug\net5.0\AqueductExample.Shared.application" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClsidMap Remove="obj\Debug\net5.0\AqueductExample.Shared.clsidmap" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <RegFreeComManifest Remove="obj\Debug\net5.0\AqueductExample.Shared.X.manifest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aqueduct.Shared" Version="0.1.0" />
+  </ItemGroup>
+
+</Project>
