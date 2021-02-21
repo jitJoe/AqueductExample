@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Aqueduct.Server;
 using AqueductExample.Shared;
+using AqueductExample.Shared.Exceptions;
 using Microsoft.Extensions.Logging;
 
 namespace AqueductExample.Server.Services
@@ -18,6 +19,11 @@ namespace AqueductExample.Server.Services
 
         public async Task SendMessage(ChatMessage message)
         {
+            if (message.Message == "throw please")
+            {
+                throw new SharedException("I'm throwing...");
+            }
+            
             var sendMessageTasks = (await ServerServiceProvider.GetClientServiceForAllConnectionsAsync<IChatClientService>())
                 .Select(clientService => clientService.SendMessageAsync(message));
 

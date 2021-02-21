@@ -9,20 +9,21 @@ namespace AqueductExample.Shared
     {
         public List<Type> GetAllowedTypes()
         {
-            return new List<Type>
+            return new()
             {
                 typeof(string),
                 typeof(bool),
                 typeof(int),
                 typeof(decimal),
                 typeof(char),
-                typeof(Exception)
+                typeof(Exception),
+                typeof(List<>).Assembly.GetType("System.Collections.ListDictionaryInternal")
             };
         }
 
         public List<Assembly> GetAllowedAssemblies()
         {
-            return new List<Assembly> { GetType().Assembly };
+            return new() { GetType().Assembly };
         }
     }
 }

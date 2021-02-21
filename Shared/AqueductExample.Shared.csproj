@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Exceptions" />
     <Folder Include="Models" />
   </ItemGroup>
 
@@ -50,7 +49,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aqueduct.Shared" Version="0.1.0" />
+    <PackageReference Include="Aqueduct.Shared" Version="0.1.5" />
   </ItemGroup>
 
 </Project>

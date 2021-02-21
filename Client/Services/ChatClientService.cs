@@ -8,7 +8,7 @@ namespace AqueductExample.Client.Services
 {
     public class ChatClientService : ClientService, IChatClientService, IChatClientLocalService
     {
-        private readonly Dictionary<Guid, Action<ChatMessage>> _callbacks = new Dictionary<Guid, Action<ChatMessage>>();
+        private readonly Dictionary<Guid, Action<ChatMessage>> _callbacks = new();
         
         public Task SendMessageAsync(ChatMessage message)
         {

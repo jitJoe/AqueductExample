@@ -1,6 +1,7 @@
 @using Aqueduct.Client.ServiceProvider
 @using Aqueduct.Client.Transport
 @using AqueductExample.Shared
+@using AqueductExample.Shared.Exceptions
 @using Microsoft.Extensions.Logging
 @inject IClientTransportDriver _clientTransportDriver
 @inject IClientServiceProvider _clientServiceProvider
@@ -17,10 +18,9 @@
     <ul>
         @foreach (var message in _chatMessages)
         {
-            if (message is FancyChatMessage)
+            if (message is FancyChatMessage fancyMessage)
             {
-                var fancyMessage = message as FancyChatMessage;
-                <li style="color: @fancyMessage.Colour">[@message.SentAt] @message.Sender: @message.Message</li>
+                <li style="color: @fancyMessage.Colour">[@fancyMessage.SentAt] @fancyMessage.Sender: @fancyMessage.Message</li>
             }
             else
             {
@@ -79,6 +79,11 @@
                 Sender = _username,
                 SentAt = DateTimeOffset.Now
             });
+        }
+        catch (SharedException sharedException)
+        {
+            _logger.LogError(sharedException, "Failed to send message - got SharedException back");
+            _failedSendMessage = true;
         }
         catch (Exception exception)
         {
